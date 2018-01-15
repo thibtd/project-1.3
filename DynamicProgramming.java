@@ -5,7 +5,7 @@ class DynamicProgramming{
     return a > b ? a : b;
   }
   // max valule that can be put in the knapsack (max W)
-  static int knapSack(int W, int wt[], int val[], int n){
+  static int dP(int W, int wt[], int val[], int n){
     int i , w;
     int K[][] = new int[n + 1][W + 1];
     // build table for K, bottom up
@@ -32,6 +32,6 @@ class DynamicProgramming{
     int W = 50;
     int n = val.length;
 
-    System.out.println(knapSack(W, wt, val, n));
+    System.out.println(dP(W, wt, val, n));
   }
 }
